@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  position: fixed;
+  padding: 25px 80px;
+  width: 100%;
+  color: black;
+  z-index: 9999;
+}
+
+header .logo {
+  font-size: 28px;
+  font-weight: 600;
+  float: left;
+}
+
+header .logo a {
+  text-decoration: none;
+  color: #5e9aec;
+}
+
+header .menu {
+  float: right;
+  margin-top: 5px;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  margin: 0 25px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+header .menu ul :hover {
+  color: #5e9aec;
+  -webkit-transition: ease-out .4s;
+  transition: ease-out .4s;
+}
+
+.ab a {
+  font-weight: 600;
+}
+
+.ab {
+  background-color: #5e9aec;
+  border-radius: 20px 120px / 120px;
+  height: 35px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 35px;
+  font-weight: bold;
+}
+
+.ab a:hover {
+  color: white;
+}
+
+.ab:hover {
+  color: white;
+  background-color: black;
+  font-weight: 600;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.forms-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.signin-signup {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -ms-grid;
+  display: grid;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: ease-in 4s;
+  transition: ease-in 4s;
+  width: 300px;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  height: 55px;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  border-radius: 55px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 85%;
+      grid-template-columns: 15% 85%;
+  padding: 0 .4rem;
+}
+
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  font-size: 1.1rem;
+}
+
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.input-field input::-webkit-input-placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.input-field input:-ms-input-placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.input-field input::-ms-input-placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 10px 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.btn:hover {
+  background-color: #5e9aec;
+}
+
+.social-text {
+  padding: .7rem;
+  font-size: 1rem;
+}
+
+.social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social-icons {
+  -webkit-text-decoration: black;
+          text-decoration: black;
+  height: 45px;
+  width: 45px;
+  border: 1px solid black;
+  margin: 0 0.45rem;
+  margin-bottom: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 50%;
+}
+
+.social-media a i {
+  color: #333;
+}
+
+.social-icons :hover {
+  color: #5e9aec;
+  border-color: #5e9aec;
+}
+
+.forms-container .next-login a {
+  text-decoration: none;
+  outline: none;
+  color: #333;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.forms-container .next-login a:hover {
+  color: #5e9aec;
+}
+/*# sourceMappingURL=form.css.map */
