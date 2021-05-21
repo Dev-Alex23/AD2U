@@ -158,7 +158,7 @@ mysqli_close($conn);
 <br>Property: The property known as  <a href=""><?php echo $fetchRow['street']?> <a href=""><?php echo $fetchRow['city']?> <a href=""><?php echo $fetchRow['postcode']?> </a> together with any fixtures, fittings, furnishings and
 appliances listed in the attached inventory
 <br>Term: The term will start on  <a href=""> <?php echo $fetchRow['startDate']?></a> and end on <a href="test.test.php"> <?php echo $fetchRow['endDate']?> <a/> 
-<br>Rent: £<a href="test.php?email=a.s.bobrovskaja@gmail.com" onclick="return confirm_alert(this);"> <?php echo $fetchRow['rent']?> </a> per Month
+<br>Rent: £<a href="change_price.php?email=a.s.bobrovskaja@gmail.com" onclick="return confirm_alert(this);"> <?php echo $fetchRow['rent']?> </a> per Month
 <br>Payable: In advance by equal Monthly payments without any deduction whatsoever
 the first payment to be made on the signing hereof.
 <br>Deposit: £<a href=""> <?php echo $fetchRow['deposit']?></a> payable on <a href="test.test.php"> <?php echo $fetchRow['paymentDate']?></a>
