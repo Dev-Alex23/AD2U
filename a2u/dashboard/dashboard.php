@@ -86,38 +86,38 @@
         <div class="cards">
           <div class="card-single">
             <div class="card-info">
-              <h1>54</h1>
-              <span>Tennants</span>
-            </div>
-            <div class="card-icons">
-              <i class="las la-user-friends"></i>
-            </div>
-          </div>
-          <div class="card-single">
-            <div class="card-info">
-              <h1>54</h1>
-              <span>Tennants</span>
-            </div>
-            <div class="card-icons">
-              <i class="las la-user-friends"></i>
-            </div>
-          </div>
-          <div class="card-single">
-            <div class="card-info">
-              <h1>54</h1>
-              <span>Tennants</span>
-            </div>
-            <div class="card-icons">
-              <i class="las la-user-friends"></i>
-            </div>
-          </div>
-          <div class="card-single">
-            <div class="card-info">
               <h1>5</h1>
+              <span>Properties</span>
+            </div>
+            <div class="card-icons">
+              <i class="las la-user-friends"></i>
+            </div>
+          </div>
+          <div class="card-single">
+            <div class="card-info">
+              <h1>10</h1>
               <span>Tennants</span>
             </div>
             <div class="card-icons">
               <i class="las la-user-friends"></i>
+            </div>
+          </div>
+          <div class="card-single">
+            <div class="card-info">
+              <h1>4</h1>
+              <span>Active Agreements</span>
+            </div>
+            <div class="card-icons">
+            <i class="las la-file-contract"></i>
+            </div>
+          </div>
+          <div class="card-single">
+            <div class="card-info">
+              <h1>13</h1>
+              <span>All Agreements</span>
+            </div>
+            <div class="card-icons">
+            <i class="las la-file-contract"></i>
             </div>
           </div>
         </div>
