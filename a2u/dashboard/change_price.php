@@ -141,7 +141,7 @@ mysqli_close($conn);
 
   <main>
 	 
-    <form action="test.php?email=<?php echo $Email; ?>" method="post">
+    <form action="change_price.php?email=<?php echo $Email; ?>" method="post">
       <div class="container1">
       <p style='color: red'><?php echo $done ?></p>
         <h1>Request a change</h1>
