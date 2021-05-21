@@ -23,7 +23,7 @@
     die("Connection failed: " . mysqli_connect_error());
   }
  
-  $sql_display_request = "SELECT * FROM agreementchanges WHERE AgreementChangesID='92'";
+  $sql_display_request = "SELECT * FROM agreementchanges WHERE AgreementChangesID='2'";
   $rs3 = mysqli_query($conn, $sql_display_request);
   //if(mysqli_query($conn, $sql_display_request)){
   //  echo "Request has been sent successfully!";}

@@ -28,6 +28,14 @@
   }
 
   $done='';
+  $headers[]="MIME-Version: 1.0";
+  $headers[]="Content-type: text/html; charset=iso-8859-1";
+  $message = " 
+  <html>
+  <body>
+  Please review your new tenancy agreement <a href= 'http://localhost/AD2U/a2u/dashboard/tenants2.php'> here </a>
+  </body>
+  </html>";
   if(isset($_POST['submit']))
    {    
        $tfirstName=$_POST['tfirstName'];
@@ -48,8 +56,8 @@
        VALUES ('$tfirstName', '$tlastName', '$email', '$landFirstName', '$landLastName', '$landAddress', '$propertyAddress', '$startDate', '$endDate', '$rent','$paymentDate', '$deposit')";
             
        if (mysqli_query($conn, $sql)) {
-          $done="Request has been sent successfully!";
-          
+          $done="A new agreement has been created and the request to review it have been sent to the tenant!";
+          mail("tenant_a@mail.ru", "Your tenancy agreement is ready to review", $message, implode("\r\n",$headers));
         } else {
           echo "Error: " . $sql . ":-" . mysqli_error($conn);}
        
@@ -133,6 +141,7 @@
       </header>
     <main>  
     <div class="container">
+    <p style='color: red'><?php echo $done ?></p>
       <header>Create a new agreement</header>
       <div class="step-row">
 	 <div id="progress"></div>
