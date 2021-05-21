@@ -93,7 +93,7 @@ mysqli_close($conn);
           <label for="">
             <i class="las la-bars"></i>
           </label>
-          Dashboard
+         
         </h2>
         <div class="search">
           <i class="las la-search"></i>

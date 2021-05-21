@@ -34,7 +34,14 @@ $rs = mysqli_query($conn, $sql1);
 $fetchRow = mysqli_fetch_assoc($rs);
 $name=$fetchRow['tfirstName'];
 $surname=$fetchRow['tlastName'];
-$message = "Please view requested changes from tenant $name $surname" ;
+$headers[]="MIME-Version: 1.0";
+$headers[]="Content-type: text/html; charset=iso-8859-1";
+$message = " 
+<html>
+<body>
+Please view requested changes from tenant $name $surname <a href= 'http://localhost/AD2U/a2u/dashboard/viewrequest.php'> here </a>
+</body>
+</html>";
 $message_tenant="Please follow the link to review an agreement http://localhost/index.php?email=$Email";
 if(isset($_POST['submit']))
 {    
@@ -49,7 +56,7 @@ if(isset($_POST['submit']))
      
      if (mysqli_query($conn, $sql)) {
         $done="Request has been sent successfully!";
-        mail("landlord_anzelab@mail.ru", "Tenant $name $surname requested some agreement changes", $message);
+        mail("landlord_anzelab@mail.ru", "Tenant $name $surname requested some agreement changes", $message, implode("\r\n",$headers));
         mysqli_query($conn, $sql_notification);
        // mysqli_query($conn, $sql_notification);
         //mail("tenant_a@mail.ru", "View an agreement and accept it or request a change=)", $message_tenant);
@@ -124,7 +131,7 @@ mysqli_close($conn);
           <label for="">
             <i class="las la-bars"></i>
           </label>
-          Dashboard
+          
         </h2>
         <div class="search">
           <i class="las la-search"></i>
