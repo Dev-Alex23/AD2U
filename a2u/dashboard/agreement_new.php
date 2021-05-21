@@ -26,8 +26,37 @@
   {
     die("Connection failed: " . mysqli_connect_error());
   }
-  
 
+  $done='';
+  if(isset($_POST['submit']))
+   {    
+       $tfirstName=$_POST['tfirstName'];
+       $tlastName=$_POST['tlastName'];
+       $email=$_POST['email'];
+       $landFirstName=$_POST['landFirstName'];
+       $landLastName=$_POST['landLastName'];
+       $landAddress=$_POST['landAddress'];
+       $propertyAddress=$_POST['propertyAddress'];
+       $startDate=$_POST['startDate'];
+       $endDate=$_POST['endDate'];
+       $rent=$_POST['rent'];
+       $paymentDate=$_POST['paymentDate'];
+       $deposit=$_POST['deposit'];
+
+ 
+       $sql = "INSERT INTO agreements (tfirstName, tlastName, email, landFirstName, landLastName, landAddress, propertyAddress, startDate, endDate, rent, paymentDate, deposit)
+       VALUES ('$tfirstName', '$tlastName', '$email', '$landFirstName', '$landLastName', '$landAddress', '$propertyAddress', '$startDate', '$endDate', '$rent','$paymentDate', '$deposit')";
+            
+       if (mysqli_query($conn, $sql)) {
+          $done="Request has been sent successfully!";
+          
+        } else {
+          echo "Error: " . $sql . ":-" . mysqli_error($conn);}
+       
+   
+    }
+  mysqli_close($conn);
+  
 ?>
 
 
@@ -112,34 +141,34 @@
 		<div class="step-col"><small>Step 3</small></div>
 	</div>
       <div class="form-outer">
-        <form action="#">
+        <form action="agreement_new.php" method="post">
           <div class="page slide-page">
             <div class="title">Tenant details:</div>
             <div class="field">
               <div class="label">First Name</div>
-              <input type="text">
+              <input type="text" name="tfirstName">
             </div>
             <div class="field">
               <div class="label">Last Name</div>
-              <input type="text">
+              <input type="text" name="tlastName">
             </div>
             <div class="field">
               <div class="label">Email</div>
-              <input type="text">
+              <input type="text" name="email">
             </div>
             
             <div class="title">Landlord details:</div>
             <div class="field">
               <div class="label">First Name</div>
-              <input type="text">
+              <input type="text" name="landFirstName">
             </div>
             <div class="field">
               <div class="label">Last Name</div>
-              <input type="text">
+              <input type="text" name="landLastName">
             </div>
             <div class="field">
               <div class="label">Address</div>
-              <input type="text">
+              <input type="text" name="landAddress">
             </div>
             <div class="field">
               <button class="firstNext next" id="Next1">Next</button>
@@ -150,7 +179,7 @@
             <div class="title">Property and Term</div>
             <div class="field">
               <div class="label">Property Address</div>
-              <input type="text">
+              <input type="text" name="propertyAddress">
             </div>
             <div class="field">
               <div class="label">Number of Bedrooms</div>
@@ -158,11 +187,11 @@
             </div>
             <div class="field">
               <div class="label">Term Starts on</div>
-              <input type="Date">
+              <input type="Date" name="startDate">
             </div>
             <div class="field">
               <div class="label">Term Ends on</div>
-              <input type="Date">
+              <input type="Date" name="endDate">
             </div>
             <div class="field">
               <div class="label">Break Clause (in months)</div>
@@ -178,15 +207,15 @@
             <div class="title">Payments</div>
             <div class="field">
               <div class="label">Rent Amount</div>
-              <input type="number">
+              <input type="number" name="rent">
             </div>
             <div class="field">
               <div class="label">Rent Paid on</div>
-              <input type="date">
+              <input type="date" name="paymentDate">
             </div>
             <div class="field">
               <div class="label">Deposit Amount</div>
-              <input type="number">
+              <input type="number" name="deposit">
             </div>
             <div class="field">
               <div class="label">Deposit Paid on</div>
@@ -202,7 +231,7 @@
             </div>
             <div class="field btns">
               <button class="prev-2 prev" id="Back2">Previous</button>
-              <button class="submit">Submit</button>
+              <button class="submit" type="submit" name="submit">Submit</button>
 
             </div>
             <div class="field btns">
