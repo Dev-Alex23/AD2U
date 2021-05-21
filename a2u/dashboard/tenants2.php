@@ -155,13 +155,13 @@ mysqli_close($conn);
 <br>The Tenant: <a href=""><?php echo $fetchRow['tfirstName']?></a>
 <br>The Tenant' Surname: <a href=""><?php echo $fetchRow['tlastName']?></a>
 <br>
-<br>Property: The property known as  <a href=""><?php echo $fetchRow['street']?> <a href=""><?php echo $fetchRow['city']?> <a href=""><?php echo $fetchRow['postcode']?> </a> together with any fixtures, fittings, furnishings and
+<br>Property: The property known as  <a href=""><?php echo $fetchRow['propertyAddress']?>  </a> together with any fixtures, fittings, furnishings and
 appliances listed in the attached inventory
 <br>Term: The term will start on  <a href=""> <?php echo $fetchRow['startDate']?></a> and end on <a href="test.test.php"> <?php echo $fetchRow['endDate']?> <a/> 
 <br>Rent: £<a href="change_price.php?email=a.s.bobrovskaja@gmail.com" onclick="return confirm_alert(this);"> <?php echo $fetchRow['rent']?> </a> per Month
 <br>Payable: In advance by equal Monthly payments without any deduction whatsoever
 the first payment to be made on the signing hereof.
-<br>Deposit: £<a href=""> <?php echo $fetchRow['deposit']?></a> payable on <a href="test.test.php"> <?php echo $fetchRow['paymentDate']?></a>
+<br>Deposit: £<a href=""> <?php echo $fetchRow['deposit']?></a> payable on <a href=""> <?php echo $fetchRow['paymentDate']?></a>
 <br><br>
 <br><center>
 
